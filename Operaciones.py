@@ -17,8 +17,10 @@ def calcular(num1,num2,opt):
         resultado = num1 * num2
         print(f"El resultado es: {resultado}")
     elif opt == 4:
-        while num1 != 0:
-            resultado = num1 / num2
-            print(f"El resultado es: {resultado}")
+        while num2 == 0:
+            print("Error, No se puede dividir por cero, intente nuevamente")
+            break
         else:
-            print("Error, no se puede dividir por 0")        
+            resultado = num1 // num2
+            print(f"El resultado es: {resultado}")
+ 
