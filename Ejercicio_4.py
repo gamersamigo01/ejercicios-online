@@ -1,11 +1,13 @@
 peliculas = ["titanic","rey leon"]
+posicion = 0
 salida_menu = False
 while not salida_menu:
     print("###Bienvenido al arriendo de peliculas###")
     print("1. Guardar peliculas")
     print("2. Mostrar peliculas")
     print("3. Buscar pelicula")
-    print("4. Salir")
+    print("4. Eliminar pelicula")
+    print("5. Salir")
     try:
         opt = int(input("Ingrese una opcion: "))
     except ValueError:
@@ -32,6 +34,12 @@ while not salida_menu:
                 else:
                     print("Error, pelicula no encontrada")
             elif opt == 4:
+                print("Eliminar")
+                pelicula_eliminar = input("Ingrese su pelicula para eliminar de la lista: ")
+                if pelicula_eliminar in peliculas:
+                    peliculas.pop(posicion)
+                    print("Pelicula eliminada")
+            elif opt == 5:
                 print("Salir")
                 salida_menu = True
             else:
