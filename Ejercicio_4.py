@@ -7,7 +7,8 @@ while not salida_menu:
     print("2. Mostrar peliculas")
     print("3. Buscar pelicula")
     print("4. Eliminar pelicula")
-    print("5. Salir")
+    print("5. Actualizar pelicula")
+    print("6. Salir")
     try:
         opt = int(input("Ingrese una opcion: "))
     except ValueError:
@@ -40,6 +41,11 @@ while not salida_menu:
                     peliculas.pop(posicion)
                     print("Pelicula eliminada")
             elif opt == 5:
+                print("Actualizar")
+                pelicula_antes_actualizada = input("Ingrese la pelicula que quiera actualizar su titulo: ")
+                if pelicula_antes_actualizada in peliculas:
+                    print("xd")
+            elif opt == 6:
                 print("Salir")
                 salida_menu = True
             else:
